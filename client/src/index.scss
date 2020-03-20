@@ -1,0 +1,20 @@
+:root{
+  --offWhite: #FCFCFC;
+  --mainBlue: #001242;
+  --tertiary: #EF8A17;
+  --text: #040F16;
+  --altBlue: #0094C6;
+  --altBlueShade: #1032ca;
+  --richBlack: #051014;
+  --offShade: rgba(223, 219, 219, 0.5);
+
+  --museBlue: #0892A5;
+  --darkCyan: #06908F;
+  --persianGreen: #0CA4A5;
+}
+
+
+body{
+  font-family: 'Crimson Text', cursive;
+  color: var(--richBlack) !important;
+}
