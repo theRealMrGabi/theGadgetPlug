@@ -31,7 +31,7 @@ const App = ({ checkUserSession, currentUser}) => {
         <Navbar />
         <Switch>
           <ErrorBoundary>
-            <Suspense fallback={<Spinner />}>
+            <Suspense fallback={<Spinner/>}>
               <Route exact path='/' component={Homepage} />
               <Route path='/shop' component={Shop} />
 
