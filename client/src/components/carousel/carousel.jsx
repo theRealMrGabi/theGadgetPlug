@@ -53,7 +53,13 @@ export default Carousel
 
 const CarouselContainer = styled.div `
 
-    margin: 3.5rem auto 0rem auto;
+    width: 100vw;
+    padding-right: 2px !important;
+
+    @media screen and (max-width: 580px) {
+          ${'' /* width: 100vw; */}
+          height: 100%;
+      }
 
     .carousel-item{
 

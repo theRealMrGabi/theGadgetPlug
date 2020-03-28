@@ -27,7 +27,7 @@ const Navbar = ({ hidden, currentUser, signOutStart }) => {
 
             </div>
 
-            <div className="collapse navbar-collapse" id="mobileNav">
+            <div className="collapse navbar-collapse main-nav" id="mobileNav">
                 <ul className="navbar-nav mx-auto mr-auto">
                     <li className="nav-item">
                         <Link className="nav-link" href="#shop" to='/shop'>Shop</Link>
@@ -48,23 +48,23 @@ const Navbar = ({ hidden, currentUser, signOutStart }) => {
                         <Link className="nav-link" href="#iphone" to='/shop/games'>Games</Link>
                     </li>
                 </ul>
-                <ul className="navbar-nav ml-auto">
+                <div className="nav-item">
                     {
                         currentUser ?
-                            <li className="nav-item">
-                                <div className="nav-link sign-out" onClick={() => signOutStart()}>SIGN OUT</div>
-                            </li>
+                            <div className="nav-link sign-out" onClick={() => signOutStart()}>SIGN OUT</div>
                             :
-                            <li className="nav-item">
-                                <Link className="nav-link" to='/signin'>SIGN IN</Link>
-                            </li>
+                            <Link className="nav-link sign-out" to='/signin'>SIGN IN</Link>
                     }
+                </div>
+                <div className="navbar-nav">
                     <CartIcon />
-                </ul>
-                {hidden ? null : <CartDropdown />}
-            </div>
-        </NavContainer>
+                    {hidden ? null : <CartDropdown />}
 
+                </div>
+
+            </div>
+
+        </NavContainer>
     )
 }
 

@@ -18,13 +18,6 @@ const CartIcon = ({ toggleCart, itemCount}) => {
     )
 }
 
-/**
- * for performance purpose the mapStateToProps in this comment will be replaced with the one below
- * const mapStateToProps = ({cart: {cartItems} }) => ({
- *  itemCount: cartItems.reduce((accumulatedQty, cartItm) => accumulatedQty + cartItem.quantity, 0)
- * })
- */
-
 const mapStateToProps = state => ({
     itemCount: selectCartItemsCount(state)
 })

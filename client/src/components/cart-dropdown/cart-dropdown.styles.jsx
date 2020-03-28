@@ -28,7 +28,6 @@ const CartDropdownContainer = styled.div `
         padding: 0.5rem 0.5rem;
         margin: 1rem 1rem;
     }
-
 `
 
 export default CartDropdownContainer ;
