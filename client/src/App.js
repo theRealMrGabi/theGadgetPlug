@@ -5,9 +5,7 @@ import {connect} from 'react-redux';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { createStructuredSelector } from 'reselect';
 import { checkUserSession } from './redux/user/user.action';
-import './index.scss';
 import Navbar from './components/navbar/navbar';
-import Homepage from './components/homepage/homepage';
 import SignUpSignIn from './components/sign-up-and-sign-in/sign-up-and-sign-in';
 
 import Iphone from './pages/iPhone';
@@ -18,6 +16,8 @@ import SmartWatch from './pages/Smartwatch';
 import Games from './pages/Games';
 import Checkout from './pages/Checkout';
 import Shop from './components/shop/shop';
+import Footer from './components/footer/footer';
+import LandingPage from './components/LandingPage/LandingPage';
 
 const App = ({ checkUserSession, currentUser}) => {
 
@@ -29,7 +29,7 @@ const App = ({ checkUserSession, currentUser}) => {
       <React.Fragment>
         <Navbar />
         <Switch>
-          <Route exact path='/' component={Homepage} />
+          <Route exact path='/' component={LandingPage} />
           <Route path='/shop' component={Shop} />
 
           <Route path='/shop/laptop' component={Laptop} />
@@ -41,6 +41,7 @@ const App = ({ checkUserSession, currentUser}) => {
           <Route path='/signin' render={() => currentUser ? (< Redirect to='/shop' />) : (< SignUpSignIn />)} />
           <Route path='/checkout' component={Checkout} />
         </Switch>
+        {/* <Footer /> */}
       </React.Fragment>
     )
 }
@@ -53,4 +54,4 @@ const mapDispatchToProps = dispatch =>({
   checkUserSession: () => dispatch(checkUserSession())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps) (App)
+export default connect(mapStateToProps, mapDispatchToProps) (App) ;

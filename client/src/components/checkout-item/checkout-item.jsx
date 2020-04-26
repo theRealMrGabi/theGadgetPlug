@@ -13,11 +13,11 @@ const CheckOutItem = ({ cartItem, removeItem, addItem, clearItem }) => {
             </div>
             <span className="name">{title}</span>
             <div className="quantity">
-                <div className="btn-black " onClick={() => removeItem(cartItem)} data-toggle="tooltip" data-placement="top" title="decrease item">&#10134;</div>
+                <div onClick={() => removeItem(cartItem)} data-toggle="tooltip" data-placement="top" title="decrease item">&#10134;</div>
                     {quantity}
-                <div className="btn-black mx-1" onClick={() => addItem(cartItem)} data-toggle="tooltip" data-placement="top" title="increase item"> &#10010;</div>
+                <div className="mx-1" onClick={() => addItem(cartItem)} data-toggle="tooltip" data-placement="top" title="increase item"> &#10010;</div>
             </div>
-            <span className="price">{price}</span>
+            <span className="price">${price}</span>
             <div className="remove-button" onClick={() => clearItem(cartItem) }>&#10006; </div>
         </CheckOutItemContainer>
     )

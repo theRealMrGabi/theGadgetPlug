@@ -21,8 +21,7 @@ const CartIconContainer = styled.div `
             font-size: 10px;
             font-weight: bold;
             bottom: 12px;
-            ${'' /* left: 15px; */}
-            left: 17px;
+            left: 20px;
 
             &:hover{
                 color: var(--offWhite);

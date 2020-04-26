@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { maxMediaQueries } from '../../AppGlobalStyle';
 
 const CartDropdownContainer = styled.div `
     display: flex;
@@ -28,6 +29,13 @@ const CartDropdownContainer = styled.div `
         padding: 0.5rem 0.5rem;
         margin: 1rem 1rem;
     }
+
+    ${maxMediaQueries("mobileLarge")`
+        width: 15rem;
+        height: 20rem;
+        right: -1.6rem !important;
+        top: 3.1rem;
+    `}
 `
 
 export default CartDropdownContainer ;

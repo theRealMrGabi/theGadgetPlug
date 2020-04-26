@@ -8,17 +8,18 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
-import './index.scss';
 import App from './App';
 
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
 import { store, persistor} from './redux/store';
+import AppGlobalStyle from './AppGlobalStyle';
 
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter >
             <PersistGate persistor={persistor} >
+                <AppGlobalStyle />
                 <App />
             </PersistGate>
         </BrowserRouter>

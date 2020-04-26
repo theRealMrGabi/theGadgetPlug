@@ -16,7 +16,7 @@ const Navbar = ({ hidden, currentUser, signOutStart }) => {
     return (
         <NavContainer className="navbar fixed-top navbar-expand-sm">
             <div className="navigation">
-                <Link to='/'>
+                <Link to='/' className="logo-brand" >
                     <img src={logo} alt="" className="navbar-brand" />
                 </Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileNav">
@@ -47,21 +47,20 @@ const Navbar = ({ hidden, currentUser, signOutStart }) => {
                     <li className="nav-item">
                         <Link className="nav-link" href="#iphone" to='/shop/games'>Games</Link>
                     </li>
+                    <li className="nav-item">
+                        {
+                            currentUser ?
+                                <div className="nav-link sign-out" onClick={() => signOutStart()}>Log Out</div>
+                                :
+                                <Link className="nav-link sign-out" to='/signin'>LogIn</Link>
+                        }
+                    </li>
                 </ul>
-                <div className="nav-item">
-                    {
-                        currentUser ?
-                            <div className="nav-link sign-out" onClick={() => signOutStart()}>SIGN OUT</div>
-                            :
-                            <Link className="nav-link sign-out" to='/signin'>SIGN IN</Link>
-                    }
-                </div>
-                <div className="navbar-nav">
-                    <CartIcon />
-                    {hidden ? null : <CartDropdown />}
+            </div>
 
-                </div>
-
+            <div className="navbar-nav" id="cart-icon" >
+                <CartIcon />
+                {hidden ? null : <CartDropdown />}
             </div>
 
         </NavContainer>
@@ -77,4 +76,4 @@ const mapDispatchToProps = dispatch => ({
     signOutStart: () => dispatch(signOutStart())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar) ;

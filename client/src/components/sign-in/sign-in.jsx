@@ -4,7 +4,6 @@ import { ButtonContainer } from '../button/button';
 import { googleSignInStart, emailSignInStart } from '../../redux/user/user.action';
 import {connect} from 'react-redux';
 
-
 const SignIn = ({ emailSignInStart, googleSignInStart }) => {
 
     const [userCredentials, setuserCredentials] = useState({email: '' , password: ''}) ;
@@ -24,11 +23,13 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
     }
     
     return (
-        <SignInContainer className="col-sm-8 col-md-6 col-10">
+        <SignInContainer>
             <div className="title text-capitalize">
                 <h3>i already have an account</h3>
                 <span>sign in with your email and password</span>
             </div>
+
+            <br/>
 
             <form onSubmit={handleSubmit} className="text-capitalize" >
                 <label htmlFor="email">email</label>
@@ -68,4 +69,4 @@ const mapDispatchToProps = dispatch => ({
     emailSignInStart: (email , password) => dispatch(emailSignInStart({email, password}))
 })
 
-export default connect(null, mapDispatchToProps) (SignIn)
+export default connect(null, mapDispatchToProps) (SignIn) ;

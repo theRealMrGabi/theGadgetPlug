@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import logo1 from '../../assets/closed_macbook.jpg';
 import logo2 from '../../assets/computer.jpg';
 import logo3 from '../../assets/iphone_held.jpg';
+import { mediaQueries } from '../../AppGlobalStyle';
 
 const Carousel = () => {
     return (
@@ -17,7 +18,7 @@ const Carousel = () => {
             <div className="carousel-inner" role="listbox">
                 <div className="carousel-item active" >
                     <img src={logo1} className='d-block w-100 img-fluid' alt="" />
-                    <div className="carousel-caption carousel-text  text-center">
+                    <div className="carousel-caption carousel-text text-center">
                         <h1>Apple</h1>
                         <Link to='/shop' className="btn btn-outline-light btn-lg link-test">SHOP NOW</Link>
                     </div>
@@ -55,11 +56,19 @@ const CarouselContainer = styled.div `
 
     width: 100vw;
     padding-right: 2px !important;
+    margin: 0;
+    padding: 0;
 
-    @media screen and (max-width: 580px) {
+    ${mediaQueries("mobileSmall")`
+        ${'' /* height: 100%; */}
+        height: 10rem !important;
+        border: 2px solid green;
+    `}
+
+    ${'' /* @media screen and (max-width: 580px) {
           ${'' /* width: 100vw; */}
-          height: 100%;
-      }
+          ${'' /* height: 100%; */}
+      ${'' /* } */} */}
 
     .carousel-item{
 
@@ -73,7 +82,13 @@ const CarouselContainer = styled.div `
                 color: var(--darkCyan) !important;
                 font-size: 2rem;
                 font-weight: bold;
+                margin: 5rem 0;
+                background: var(--offShade);
+
+                &:hover{
+                    background: white;
+                }
             }
         }
     }
-`
+`;

@@ -35,24 +35,54 @@ const SignUp = ({ signUpStart }) => {
     }
 
     return (
-        <SignUpContainer className="col-sm-8 col-md-6 col-10">
+        <SignUpContainer>
             <div className="title text-capitalize">
                 <h3>I dont have an account ? </h3>
                 <span>sign up with your email and password</span>
             </div>
 
+            <br />
+
             <form onSubmit={handleSubmit} className="text-capitalize">
                 <label htmlFor="displayName">display Name</label>
-                <input type="text" className="form-control" name="displayName" value={displayName} required onChange={handleChange} />
+                <input type="text" 
+                    className="form-control" 
+                    name="displayName" 
+                    value={displayName} 
+                    required 
+                    onChange={handleChange} 
+                    placeholder="Display Name"
+                />
 
                 <label htmlFor="email">Email</label>
-                <input type="email" className="form-control" name="email" value={email} required onChange={handleChange} />
+                <input type="email" 
+                    className="form-control" 
+                    name="email" 
+                    value={email} 
+                    required 
+                    onChange={handleChange} 
+                    placeholder="email"
+                />
 
                 <label htmlFor="password">password</label>
-                <input type="password" className="form-control" name="password" value={password} required onChange={handleChange} />
+                <input type="password" 
+                    className="form-control" 
+                    name="password" 
+                    value={password} 
+                    required 
+                    onChange={handleChange} 
+                    placeholder="password"
+                />
 
                 <label htmlFor="confirmPassword">confirm password</label>
-                <input type="password" className="form-control" name="confirmPassword" value={confirmPassword} required onChange={handleChange} />
+                <input type="password" 
+                    className="form-control" 
+                    name="confirmPassword" 
+                    value={confirmPassword} 
+                    required 
+                    onChange={handleChange} 
+                    placeholder="confirm password"
+                />
 
                 <div className="button justify-content-around">
                     <ButtonContainer tertiary onSubmit={handleSubmit} >Sign up with email</ButtonContainer>
@@ -67,4 +97,4 @@ const mapDispatchToProps = dispatch => ({
     signUpStart: userCredentials => dispatch(signUpStart(userCredentials))
 })
 
-export default connect(null, mapDispatchToProps) (SignUp);
+export default connect(null, mapDispatchToProps) (SignUp) ;

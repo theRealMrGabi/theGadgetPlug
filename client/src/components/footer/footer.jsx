@@ -30,13 +30,15 @@ export default Footer
 const FooterContainer = styled.div `
     color: white;
     background-color: var(--richBlack);
+    height: 10rem;
+    margin: 30rem 0;
       
-      @media screen and (max-width: 800px) {
+      ${'' /* @media screen and (max-width: 800px) {
           width: 100vw;
           height: 55vh;
           margin: 0px !important;
           padding: 0px !important;
-      }
+      } */}
 
     img{
         height: 3rem;

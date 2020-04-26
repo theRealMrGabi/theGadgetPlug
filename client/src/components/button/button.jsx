@@ -8,6 +8,7 @@ export const ButtonContainer = styled.button `
     height: 3rem;
     width: auto;
     transition: all 0.5s ease-in-out;
+    border-radius: 0.8rem;
 
     &:focus{
         outline: none;
@@ -28,6 +29,19 @@ export const ButtonContainer = styled.button `
             return `
                 color: var(--tertiary) ;
                 border-color: var(--richBlack);
+
+                :hover{
+                    color: var(--altBlue);
+                    background: var(--tertiary);
+                    border: var(--altBlue);
+                }
+            `
+        } else if (props.landing) {
+            return `
+                color: var(--mainBlue) ;
+                border-color: var(--richBlack);
+                width: 10rem !important;
+                background: var(--altBlue);
 
                 :hover{
                     color: var(--altBlue);

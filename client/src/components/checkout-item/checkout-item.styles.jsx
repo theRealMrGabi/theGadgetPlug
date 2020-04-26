@@ -14,10 +14,11 @@ const CheckOutItemContainer = styled.div `
     padding-right: 15px;
 
     img {
-      width: 100%;
-      height: 100%;
+      height: 30%;
+      width: 50%;
     }
   }
+  
   .name,
   .quantity,
   .price {
@@ -26,22 +27,6 @@ const CheckOutItemContainer = styled.div `
   
   .quantity{
     display: flex;
-
-    .btn-black{
-    background: transparent;
-    text-transform: capitalize;
-    font-size: 0.8rem !important;
-    color: var(--richBlack);
-    border-radius: 0 !important;
-    ${'' /* border: none !important; */}
-    border: 0.1rem solid var(--richBlack);
-    ${'' /* height: 0.5rem !important; */}
-    cursor: pointer;
-    width: 1.3rem;
-    padding: 0.5rem auto ;
-    margin: 0.5rem 0.3rem;
-    position: relative;
-  }
 
     .value{
       margin: 0 10px;
@@ -56,5 +41,6 @@ const CheckOutItemContainer = styled.div `
     padding-left: 12px;
     cursor: pointer;
   }
-`
+`;
+
 export default CheckOutItemContainer

@@ -5,11 +5,11 @@ import SignIn from '../sign-in/sign-in'
 
 const SignUpSignIn = () => {
     return (
-        <SignUpSignInStyles className="col-10 col-lg-12 mx-auto">
+        <SignUpSignInStyles>
             <SignIn />
             <SignUp />
         </SignUpSignInStyles>
     )
 }
 
-export default SignUpSignIn
+export default SignUpSignIn ;
