@@ -15,10 +15,10 @@ const StripeCheckoutButton = ({ price }) => {
                 token: token
             }
         }).then(response => {
-            console.log(response);
+            // console.log(response);
             alert('payment successful');
         }).catch(error => {
-            console.log('payment error: ' , error)
+            // console.log('payment error: ' , error)
             alert('there was an issue with your payment');
         })
     };
@@ -39,4 +39,4 @@ const StripeCheckoutButton = ({ price }) => {
     )
 }
 
-export default StripeCheckoutButton;
+export default StripeCheckoutButton ;
