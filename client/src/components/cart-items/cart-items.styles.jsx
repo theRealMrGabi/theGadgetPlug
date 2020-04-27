@@ -18,7 +18,6 @@ const CartItemContainer = styled.div `
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        ${'' /* padding: 10px 20px; */}
 
         .title{
             font - size: 16px;

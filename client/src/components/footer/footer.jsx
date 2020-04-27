@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import logo from '../../assets/logo.svg';
+import FooterContainer from './footer.styles';
 
 const Footer = () => {
     return (
@@ -8,7 +8,8 @@ const Footer = () => {
             <div className="col-md-5 text-center">
                 <img src={logo} alt="footer icon"/>
 
-                <br/>
+                {' '}
+                <h3 className="font-weight-bold">theRealMrGabi&copy; </h3>
 
                 <div>
                     <a className="footer-link" href="https://www.github.com/theRealMrGabi" target="_blank" rel="noopener noreferrer"> <i className="fab font-icons fa-github"></i> </a>
@@ -25,38 +26,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
-
-const FooterContainer = styled.div `
-    color: white;
-    background-color: var(--richBlack);
-    height: 10rem;
-    margin: 30rem 0;
-      
-      ${'' /* @media screen and (max-width: 800px) {
-          width: 100vw;
-          height: 55vh;
-          margin: 0px !important;
-          padding: 0px !important;
-      } */}
-
-    img{
-        height: 3rem;
-        margin: 1rem 0;
-    }
-
-    .footer-link{
-        color: var(--offWhite);
-        text-decoration: none;
-
-        .font-icons{
-        font-size: 2rem;
-        padding: 0 0.5rem;
-        margin: 1.2rem .5rem 0 0;
-        }
-    }
-
-    .brand-name{
-        font-size: 1.6rem;
-    }
-`
+export default Footer ;

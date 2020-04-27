@@ -26,4 +26,4 @@ export const fetchProductsStartAsync = () => {
             dispatch(fetchProductsSuccess(productMap));
         }).catch(error => dispatch(fetchProductsFailure(error.message)))
     }
-}
+} ;

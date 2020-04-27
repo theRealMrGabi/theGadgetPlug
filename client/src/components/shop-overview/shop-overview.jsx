@@ -22,4 +22,4 @@ const mapStateToProps = createStructuredSelector({
     products: selectShopItemsForOverview
 })
 
-export default connect(mapStateToProps) (ShopOverview)
+export default connect(mapStateToProps) (ShopOverview) ;

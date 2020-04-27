@@ -41,7 +41,7 @@ const App = ({ checkUserSession, currentUser}) => {
           <Route path='/signin' render={() => currentUser ? (< Redirect to='/shop' />) : (< SignUpSignIn />)} />
           <Route path='/checkout' component={Checkout} />
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </React.Fragment>
     )
 }

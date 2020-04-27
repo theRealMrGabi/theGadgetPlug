@@ -5,7 +5,6 @@ import { selectIsProductFetching } from '../../redux/shop/shop.selector';
 import LoadingSpinner from '../loading-spinner/loading-spinner';
 import ShopOverview from './shop-overview';
 
-
 const mapStateToProps = createStructuredSelector({
     isLoading: selectIsProductFetching
 });

@@ -14,4 +14,4 @@ const CategoryPatternContainer = compose(
     LoadingSpinner
 )(CategoryPage)
 
-export default CategoryPatternContainer
+export default CategoryPatternContainer ;

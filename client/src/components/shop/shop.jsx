@@ -23,4 +23,4 @@ const mapDispatchToProps = dispatch => ({
     fetchProductsStart: () => dispatch(fetchProductsStart())
 })
 
-export default connect(null , mapDispatchToProps) (Shop)
+export default connect(null , mapDispatchToProps) (Shop) ;

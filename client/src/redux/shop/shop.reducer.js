@@ -33,5 +33,4 @@ const shopReducer = (state = initialState, action) => {
     }
 }
 
-export default shopReducer
-
+export default shopReducer ;

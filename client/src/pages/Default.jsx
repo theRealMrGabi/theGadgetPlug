@@ -16,4 +16,4 @@ const Default = ({props}) => {
     )
 }
 
-export default Default
+export default Default ;

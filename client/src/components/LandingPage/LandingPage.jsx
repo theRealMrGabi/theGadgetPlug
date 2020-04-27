@@ -1,8 +1,6 @@
 import React from 'react';
 import LandingContainer from './LandingPage.styles';
 import {ButtonContainer} from '../button/button';
-import computer from '../../assets/landing.png';
-import macbook from '../../assets/closed_macbook.jpg';
 
 const LandingPage = () => {
     return (
@@ -10,7 +8,10 @@ const LandingPage = () => {
             <div className="container-fluid">
                 <div className="row">
                     <div className="img-holder">
-                        <img src={computer} className="img-fluid" alt="" />
+                        <img src="https://res.cloudinary.com/gabirated/image/upload/v1587982236/thegadgetplug%20E-commerce/homepage%20images/landing_vnpmyj.png" 
+                            className="img-fluid" 
+                            alt="landing-img" 
+                        />
 
                         <div className="text-holder">
                             <div className="text-content">
@@ -29,7 +30,10 @@ const LandingPage = () => {
                     <h3 className="trending text-center font-weight-bold"><i className="material-icons">whatshot</i> Product of The Week</h3>
 
                     <div className="product-holder">
-                        <img src={macbook} alt="" className="img-fluid"/>
+                        <img src="https://res.cloudinary.com/gabirated/image/upload/v1587982243/thegadgetplug%20E-commerce/homepage%20images/mac_dryazn.jpg" 
+                            alt="mac" 
+                            className="img-fluid"
+                        />
 
                         <div className="product-text-holder">
                             <div className="product-text">

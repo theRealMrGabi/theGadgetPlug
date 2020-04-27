@@ -13,4 +13,4 @@ const CartItem = ({ item: { img, price, title, quantity }}) => {
     )
 }
 
-export default CartItem
+export default CartItem ;

@@ -27,6 +27,7 @@ const CheckOutItemContainer = styled.div `
   
   .quantity{
     display: flex;
+    cursor: pointer;
 
     .value{
       margin: 0 10px;
@@ -43,4 +44,4 @@ const CheckOutItemContainer = styled.div `
   }
 `;
 
-export default CheckOutItemContainer
+export default CheckOutItemContainer ;

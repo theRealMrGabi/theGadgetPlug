@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import { ButtonContainer } from '../button/button';
 import './shop-collection.scss'
 import {connect} from 'react-redux';
@@ -13,9 +12,8 @@ const ShopCollection = ({items , addItem}) => {
             <div className="col-9 col-md-6 col-lg-3 mx-auto my-3 card-container">
                 <div className="card">
                     <div className="img-container p-5">
-                        <Link to='/details'>
-                            <img src={img} className="card-img-top product-img" alt="products" />
-                        </Link>
+                        <img src={img} className="card-img-top product-img" alt="products" />
+                        
                         <ButtonContainer className="cart-btn" onClick={() => addItem(items)}>
                             <i className="fas fa-cart-plus" />
                         </ButtonContainer>
